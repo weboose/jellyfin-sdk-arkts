@@ -1,7 +1,6 @@
 {
   "type": "module",
   "name": "@weboose/jellyfin-sdk-arkts",
-  "types": "./types.d.ts",
   "keywords": [
     "HarmonyOS",
     "OpenHarmony",

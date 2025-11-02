@@ -3,6 +3,7 @@
   "name": "@weboose/jellyfin-sdk-arkts",
   "version": "0.13.0",
   "license": "Apache License 2.0",
+  "artifactType": "obfuscation",
   "description": "Please describe the basic information.",
   "dependencies": {
   },

@@ -12,6 +12,7 @@
     "Tools"
   ],
   "version": "0.13.0",
+  "artifactType": "obfuscation",
   "description": "jellyfin sdk for arkts",
   "main": "Index.ets",
   "author": "weboose",

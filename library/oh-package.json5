@@ -1,9 +1,22 @@
 {
+  "type": "module",
   "name": "@weboose/jellyfin-sdk-arkts",
+  "types": "./types.d.ts",
+  "keywords": [
+    "HarmonyOS",
+    "OpenHarmony",
+    "Jellyfin",
+    "Jellyfin SDK"
+  ],
+  "tags": [
+    "Tools"
+  ],
   "version": "0.13.0",
-  "description": "Please describe the basic information.",
+  "description": "jellyfin sdk for arkts",
   "main": "Index.ets",
-  "author": "",
+  "author": "weboose",
+  "homepage": "https://github.com/weboose",
+  "repository": "https://github.com/weboose/jellyfin-sdk-arkts",
   "license": "Apache-2.0",
   "dependencies": {
     "@ohos/axios": "^2.2.6"

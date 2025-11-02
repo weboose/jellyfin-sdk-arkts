@@ -1,0 +1,4 @@
+library/src/main/ets/utils/__tests__/*
+library/src/main/ets/utils/api/__tests__/*
+library/src/main/ets/utils/url/__tests__/*
+library/src/main/ets/discovery/__tests__/*

@@ -1,0 +1,11 @@
+{
+  "name": "@weboose/jellyfin-sdk-arkts",
+  "version": "0.13.0",
+  "description": "Please describe the basic information.",
+  "main": "Index.ets",
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ohos/axios": "^2.2.6"
+  }
+}

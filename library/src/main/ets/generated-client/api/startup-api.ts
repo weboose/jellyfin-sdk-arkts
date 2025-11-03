@@ -26,6 +26,8 @@ import type { StartupConfigurationDto } from '../models';
 import type { StartupRemoteAccessDto } from '../models';
 // @ts-ignore
 import type { StartupUserDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * StartupApi - axios parameter creator
  * @export
@@ -41,7 +43,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
         completeWizard: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Startup/Complete`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -74,7 +76,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
         getFirstUser: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Startup/User`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -107,7 +109,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
         getFirstUser2: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Startup/FirstUser`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -140,7 +142,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
         getStartupConfiguration: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Startup/Configuration`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -176,7 +178,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('setRemoteAccess', 'startupRemoteAccessDto', startupRemoteAccessDto)
             const localVarPath = `/Startup/RemoteAccess`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -215,7 +217,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('updateInitialConfiguration', 'startupConfigurationDto', startupConfigurationDto)
             const localVarPath = `/Startup/Configuration`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -252,7 +254,7 @@ export const StartupApiAxiosParamCreator = function (configuration?: Configurati
         updateStartupUser: async (startupUserDto?: StartupUserDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Startup/User`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

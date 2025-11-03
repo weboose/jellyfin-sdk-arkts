@@ -24,6 +24,8 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 import type { EncodingContext } from '../models';
 // @ts-ignore
 import type { SubtitleDeliveryMethod } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * DynamicHlsApi - axios parameter creator
  * @export
@@ -110,7 +112,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
                 .replace(`{${"segmentId"}}`, encodeURIComponent(String(segmentId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -422,7 +424,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
                 .replace(`{${"segmentId"}}`, encodeURIComponent(String(segmentId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -726,7 +728,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Videos/{itemId}/live.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1029,7 +1031,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Audio/{itemId}/master.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1323,7 +1325,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Videos/{itemId}/master.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1623,7 +1625,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Audio/{itemId}/main.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1909,7 +1911,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Videos/{itemId}/main.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2204,7 +2206,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Audio/{itemId}/master.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2498,7 +2500,7 @@ export const DynamicHlsApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Videos/{itemId}/master.m3u8`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

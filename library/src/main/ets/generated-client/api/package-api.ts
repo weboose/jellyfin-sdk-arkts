@@ -26,6 +26,8 @@ import type { PackageInfo } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { RepositoryInfo } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * PackageApi - axios parameter creator
  * @export
@@ -45,7 +47,7 @@ export const PackageApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Packages/Installing/{packageId}`
                 .replace(`{${"packageId"}}`, encodeURIComponent(String(packageId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -83,7 +85,7 @@ export const PackageApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Packages/{name}`
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -120,7 +122,7 @@ export const PackageApiAxiosParamCreator = function (configuration?: Configurati
         getPackages: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Packages`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -153,7 +155,7 @@ export const PackageApiAxiosParamCreator = function (configuration?: Configurati
         getRepositories: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Repositories`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -193,7 +195,7 @@ export const PackageApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Packages/Installed/{name}`
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -241,7 +243,7 @@ export const PackageApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('setRepositories', 'repositoryInfo', repositoryInfo)
             const localVarPath = `/Repositories`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -21,6 +21,8 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from '../base';
 // @ts-ignore
 import { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * DlnaServerApi - axios parameter creator
  * @export
@@ -40,7 +42,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ConnectionManager`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -77,7 +79,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ConnectionManager/ConnectionManager`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -114,7 +116,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ConnectionManager/ConnectionManager.xml`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -151,7 +153,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ContentDirectory`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -188,7 +190,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ContentDirectory/ContentDirectory`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -225,7 +227,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ContentDirectory/ContentDirectory.xml`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -262,7 +264,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/description`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -299,7 +301,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/description.xml`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -336,7 +338,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/icons/{fileName}`
                 .replace(`{${"fileName"}}`, encodeURIComponent(String(fileName)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -377,7 +379,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)))
                 .replace(`{${"fileName"}}`, encodeURIComponent(String(fileName)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -414,7 +416,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/MediaReceiverRegistrar`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -451,7 +453,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/MediaReceiverRegistrar/MediaReceiverRegistrar`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -488,7 +490,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/MediaReceiverRegistrar/MediaReceiverRegistrar.xml`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -525,7 +527,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ConnectionManager/Control`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -562,7 +564,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/ContentDirectory/Control`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -599,7 +601,7 @@ export const DlnaServerApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Dlna/{serverId}/MediaReceiverRegistrar/Control`
                 .replace(`{${"serverId"}}`, encodeURIComponent(String(serverId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

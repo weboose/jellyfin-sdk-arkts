@@ -32,6 +32,8 @@ import type { ItemFilter } from '../models';
 import type { ItemSortBy } from '../models';
 // @ts-ignore
 import type { SortOrder } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ChannelsApi - axios parameter creator
  * @export
@@ -47,7 +49,7 @@ export const ChannelsApiAxiosParamCreator = function (configuration?: Configurat
         getAllChannelFeatures: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Channels/Features`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -84,7 +86,7 @@ export const ChannelsApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/Channels/{channelId}/Features`
                 .replace(`{${"channelId"}}`, encodeURIComponent(String(channelId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -129,7 +131,7 @@ export const ChannelsApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/Channels/{channelId}/Items`
                 .replace(`{${"channelId"}}`, encodeURIComponent(String(channelId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -200,7 +202,7 @@ export const ChannelsApiAxiosParamCreator = function (configuration?: Configurat
         getChannels: async (userId?: string, startIndex?: number, limit?: number, supportsLatestItems?: boolean, supportsMediaDeletion?: boolean, isFavorite?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Channels`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -263,7 +265,7 @@ export const ChannelsApiAxiosParamCreator = function (configuration?: Configurat
         getLatestChannelItems: async (userId?: string, startIndex?: number, limit?: number, filters?: Array<ItemFilter>, fields?: Array<ItemFields>, channelIds?: Array<string>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Channels/Items/Latest`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -26,6 +26,8 @@ import type { MediaSegmentDtoQueryResult } from '../models';
 import type { MediaSegmentType } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * MediaSegmentsApi - axios parameter creator
  * @export
@@ -46,7 +48,7 @@ export const MediaSegmentsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/MediaSegments/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

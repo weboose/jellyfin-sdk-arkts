@@ -28,6 +28,8 @@ import type { ImageType } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { RemoteImageResult } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * RemoteImageApi - axios parameter creator
  * @export
@@ -51,7 +53,7 @@ export const RemoteImageApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/Items/{itemId}/RemoteImages/Download`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -96,7 +98,7 @@ export const RemoteImageApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/Items/{itemId}/RemoteImages/Providers`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -138,7 +140,7 @@ export const RemoteImageApiAxiosParamCreator = function (configuration?: Configu
             const localVarPath = `/Items/{itemId}/RemoteImages`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

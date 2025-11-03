@@ -38,6 +38,8 @@ import type { MediaType } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { SortOrder } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * YearsApi - axios parameter creator
  * @export
@@ -58,7 +60,7 @@ export const YearsApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/Years/{year}`
                 .replace(`{${"year"}}`, encodeURIComponent(String(year)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -110,7 +112,7 @@ export const YearsApiAxiosParamCreator = function (configuration?: Configuration
         getYears: async (startIndex?: number, limit?: number, sortOrder?: Array<SortOrder>, parentId?: string, fields?: Array<ItemFields>, excludeItemTypes?: Array<BaseItemKind>, includeItemTypes?: Array<BaseItemKind>, mediaTypes?: Array<MediaType>, sortBy?: Array<ItemSortBy>, enableUserData?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, userId?: string, recursive?: boolean, enableImages?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Years`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

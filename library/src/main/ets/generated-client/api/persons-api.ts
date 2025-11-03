@@ -32,6 +32,8 @@ import type { ItemFields } from '../models';
 import type { ItemFilter } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * PersonsApi - axios parameter creator
  * @export
@@ -52,7 +54,7 @@ export const PersonsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Persons/{name}`
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -102,7 +104,7 @@ export const PersonsApiAxiosParamCreator = function (configuration?: Configurati
         getPersons: async (limit?: number, searchTerm?: string, fields?: Array<ItemFields>, filters?: Array<ItemFilter>, isFavorite?: boolean, enableUserData?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, excludePersonTypes?: Array<string>, personTypes?: Array<string>, appearsInItemId?: string, userId?: string, enableImages?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Persons`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

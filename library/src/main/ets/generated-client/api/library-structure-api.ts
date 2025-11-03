@@ -34,6 +34,8 @@ import type { UpdateLibraryOptionsDto } from '../models';
 import type { UpdateMediaPathRequestDto } from '../models';
 // @ts-ignore
 import type { VirtualFolderInfo } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * LibraryStructureApi - axios parameter creator
  * @export
@@ -53,7 +55,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
             assertParamExists('addMediaPath', 'mediaPathDto', mediaPathDto)
             const localVarPath = `/Library/VirtualFolders/Paths`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -98,7 +100,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
         addVirtualFolder: async (name?: string, collectionType?: CollectionTypeOptions, paths?: Array<string>, refreshLibrary?: boolean, addVirtualFolderDto?: AddVirtualFolderDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Library/VirtualFolders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -150,7 +152,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
         getVirtualFolders: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Library/VirtualFolders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -186,7 +188,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
         removeMediaPath: async (name?: string, path?: string, refreshLibrary?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Library/VirtualFolders/Paths`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -233,7 +235,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
         removeVirtualFolder: async (name?: string, refreshLibrary?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Library/VirtualFolders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -277,7 +279,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
         renameVirtualFolder: async (name?: string, newName?: string, refreshLibrary?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Library/VirtualFolders/Name`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -323,7 +325,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
         updateLibraryOptions: async (updateLibraryOptionsDto?: UpdateLibraryOptionsDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Library/VirtualFolders/LibraryOptions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -362,7 +364,7 @@ export const LibraryStructureApiAxiosParamCreator = function (configuration?: Co
             assertParamExists('updateMediaPath', 'updateMediaPathRequestDto', updateMediaPathRequestDto)
             const localVarPath = `/Library/VirtualFolders/Paths/Update`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

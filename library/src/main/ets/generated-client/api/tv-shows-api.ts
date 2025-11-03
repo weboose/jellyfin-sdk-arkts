@@ -30,6 +30,8 @@ import type { ItemFields } from '../models';
 import type { ItemSortBy } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * TvShowsApi - axios parameter creator
  * @export
@@ -63,7 +65,7 @@ export const TvShowsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Shows/{seriesId}/Episodes`
                 .replace(`{${"seriesId"}}`, encodeURIComponent(String(seriesId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -167,7 +169,7 @@ export const TvShowsApiAxiosParamCreator = function (configuration?: Configurati
         getNextUp: async (userId?: string, startIndex?: number, limit?: number, fields?: Array<ItemFields>, seriesId?: string, parentId?: string, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, enableUserData?: boolean, nextUpDateCutoff?: string, enableTotalRecordCount?: boolean, disableFirstEpisode?: boolean, enableResumable?: boolean, enableRewatching?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Shows/NextUp`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -275,7 +277,7 @@ export const TvShowsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Shows/{seriesId}/Seasons`
                 .replace(`{${"seriesId"}}`, encodeURIComponent(String(seriesId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -353,7 +355,7 @@ export const TvShowsApiAxiosParamCreator = function (configuration?: Configurati
         getUpcomingEpisodes: async (userId?: string, startIndex?: number, limit?: number, fields?: Array<ItemFields>, parentId?: string, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, enableUserData?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Shows/Upcoming`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

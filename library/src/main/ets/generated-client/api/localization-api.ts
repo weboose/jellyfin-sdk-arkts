@@ -28,6 +28,8 @@ import type { CultureDto } from '../models';
 import type { LocalizationOption } from '../models';
 // @ts-ignore
 import type { ParentalRating } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * LocalizationApi - axios parameter creator
  * @export
@@ -43,7 +45,7 @@ export const LocalizationApiAxiosParamCreator = function (configuration?: Config
         getCountries: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Localization/Countries`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -76,7 +78,7 @@ export const LocalizationApiAxiosParamCreator = function (configuration?: Config
         getCultures: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Localization/Cultures`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -109,7 +111,7 @@ export const LocalizationApiAxiosParamCreator = function (configuration?: Config
         getLocalizationOptions: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Localization/Options`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -142,7 +144,7 @@ export const LocalizationApiAxiosParamCreator = function (configuration?: Config
         getParentalRatings: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Localization/ParentalRatings`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

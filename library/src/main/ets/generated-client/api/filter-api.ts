@@ -28,6 +28,8 @@ import type { MediaType } from '../models';
 import type { QueryFilters } from '../models';
 // @ts-ignore
 import type { QueryFiltersLegacy } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * FilterApi - axios parameter creator
  * @export
@@ -53,7 +55,7 @@ export const FilterApiAxiosParamCreator = function (configuration?: Configuratio
         getQueryFilters: async (userId?: string, parentId?: string, includeItemTypes?: Array<BaseItemKind>, isAiring?: boolean, isMovie?: boolean, isSports?: boolean, isKids?: boolean, isNews?: boolean, isSeries?: boolean, recursive?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Items/Filters2`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -130,7 +132,7 @@ export const FilterApiAxiosParamCreator = function (configuration?: Configuratio
         getQueryFiltersLegacy: async (userId?: string, parentId?: string, includeItemTypes?: Array<BaseItemKind>, mediaTypes?: Array<MediaType>, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Items/Filters`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

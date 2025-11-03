@@ -26,6 +26,8 @@ import type { BaseItemDtoQueryResult } from '../models';
 import type { BaseItemKind } from '../models';
 // @ts-ignore
 import type { MediaType } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * SuggestionsApi - axios parameter creator
  * @export
@@ -47,7 +49,7 @@ export const SuggestionsApiAxiosParamCreator = function (configuration?: Configu
         getSuggestions: async (userId?: string, mediaType?: Array<MediaType>, type?: Array<BaseItemKind>, startIndex?: number, limit?: number, enableTotalRecordCount?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Items/Suggestions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

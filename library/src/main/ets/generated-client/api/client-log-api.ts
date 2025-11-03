@@ -24,6 +24,8 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 import type { ClientLogDocumentResponseDto } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ClientLogApi - axios parameter creator
  * @export
@@ -40,7 +42,7 @@ export const ClientLogApiAxiosParamCreator = function (configuration?: Configura
         logFile: async (body?: File, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ClientLog/Document`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -30,6 +30,8 @@ import type { PlaybackInfoDto } from '../models';
 import type { PlaybackInfoResponse } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * MediaInfoApi - axios parameter creator
  * @export
@@ -48,7 +50,7 @@ export const MediaInfoApiAxiosParamCreator = function (configuration?: Configura
             assertParamExists('closeLiveStream', 'liveStreamId', liveStreamId)
             const localVarPath = `/LiveStreams/Close`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -86,7 +88,7 @@ export const MediaInfoApiAxiosParamCreator = function (configuration?: Configura
         getBitrateTestBytes: async (size?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Playback/BitrateTest`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -128,7 +130,7 @@ export const MediaInfoApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Items/{itemId}/PlaybackInfo`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -184,7 +186,7 @@ export const MediaInfoApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Items/{itemId}/PlaybackInfo`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -289,7 +291,7 @@ export const MediaInfoApiAxiosParamCreator = function (configuration?: Configura
         openLiveStream: async (openToken?: string, userId?: string, playSessionId?: string, maxStreamingBitrate?: number, startTimeTicks?: number, audioStreamIndex?: number, subtitleStreamIndex?: number, maxAudioChannels?: number, itemId?: string, enableDirectPlay?: boolean, enableDirectStream?: boolean, alwaysBurnInSubtitleWhenTranscoding?: boolean, openLiveStreamDto?: OpenLiveStreamDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveStreams/Open`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

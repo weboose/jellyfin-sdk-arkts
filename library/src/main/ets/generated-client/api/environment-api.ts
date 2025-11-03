@@ -28,6 +28,8 @@ import type { FileSystemEntryInfo } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { ValidatePathDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * EnvironmentApi - axios parameter creator
  * @export
@@ -43,7 +45,7 @@ export const EnvironmentApiAxiosParamCreator = function (configuration?: Configu
         getDefaultDirectoryBrowser: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Environment/DefaultDirectoryBrowser`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -81,7 +83,7 @@ export const EnvironmentApiAxiosParamCreator = function (configuration?: Configu
             assertParamExists('getDirectoryContents', 'path', path)
             const localVarPath = `/Environment/DirectoryContents`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -126,7 +128,7 @@ export const EnvironmentApiAxiosParamCreator = function (configuration?: Configu
         getDrives: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Environment/Drives`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -160,7 +162,7 @@ export const EnvironmentApiAxiosParamCreator = function (configuration?: Configu
         getNetworkShares: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Environment/NetworkShares`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -196,7 +198,7 @@ export const EnvironmentApiAxiosParamCreator = function (configuration?: Configu
             assertParamExists('getParentPath', 'path', path)
             const localVarPath = `/Environment/ParentPath`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -236,7 +238,7 @@ export const EnvironmentApiAxiosParamCreator = function (configuration?: Configu
             assertParamExists('validatePath', 'validatePathDto', validatePathDto)
             const localVarPath = `/Environment/ValidatePath`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

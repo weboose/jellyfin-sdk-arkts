@@ -26,6 +26,8 @@ import type { BaseItemDto } from '../models';
 import type { MetadataEditorInfo } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ItemUpdateApi - axios parameter creator
  * @export
@@ -45,7 +47,7 @@ export const ItemUpdateApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Items/{itemId}/MetadataEditor`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -85,7 +87,7 @@ export const ItemUpdateApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Items/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -126,7 +128,7 @@ export const ItemUpdateApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Items/{itemId}/ContentType`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -3,9 +3,9 @@ import { ConfigInterface } from "../model/JellyfinOptions";
 @ObservedV2
 export class HomeViewModel
 {
-    @Trace server: string = 'http://192.168.31.110:8096/';
-    @Trace username: string = 'jellyfin';
-    @Trace password: string = 'a5248201A';
+    @Trace server: string = 'http://demo.jellyfin.org/stable';
+    @Trace username: string = '';
+    @Trace password: string = '';
     @Trace accessToken: string = '';
     @Trace deviceId: string = '';
     @Trace userId: string = '';

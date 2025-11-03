@@ -64,6 +64,8 @@ import type { TimerInfoDtoQueryResult } from '../models';
 import type { TunerChannelMapping } from '../models';
 // @ts-ignore
 import type { TunerHostInfo } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * LiveTvApi - axios parameter creator
  * @export
@@ -83,7 +85,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         addListingProvider: async (pw?: string, validateListings?: boolean, validateLogin?: boolean, listingsProviderInfo?: ListingsProviderInfo, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/ListingProviders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -132,7 +134,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         addTunerHost: async (tunerHostInfo?: TunerHostInfo, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/TunerHosts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -172,7 +174,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/SeriesTimers/{timerId}`
                 .replace(`{${"timerId"}}`, encodeURIComponent(String(timerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -209,7 +211,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Timers/{timerId}`
                 .replace(`{${"timerId"}}`, encodeURIComponent(String(timerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -243,7 +245,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         createSeriesTimer: async (seriesTimerInfoDto?: SeriesTimerInfoDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/SeriesTimers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -280,7 +282,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         createTimer: async (timerInfoDto?: TimerInfoDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Timers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -317,7 +319,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         deleteListingProvider: async (id?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/ListingProviders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -358,7 +360,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Recordings/{recordingId}`
                 .replace(`{${"recordingId"}}`, encodeURIComponent(String(recordingId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -392,7 +394,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         deleteTunerHost: async (id?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/TunerHosts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -430,7 +432,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         discoverTuners: async (newDevicesOnly?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Tuners/Discover`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -468,7 +470,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         discvoverTuners: async (newDevicesOnly?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Tuners/Discvover`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -510,7 +512,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Channels/{channelId}`
                 .replace(`{${"channelId"}}`, encodeURIComponent(String(channelId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -548,7 +550,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getChannelMappingOptions: async (providerId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/ChannelMappingOptions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -585,7 +587,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getDefaultListingProvider: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/ListingProviders/Default`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -619,7 +621,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getDefaultTimer: async (programId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Timers/Defaults`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -656,7 +658,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getGuideInfo: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/GuideInfo`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -693,7 +695,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getLineups: async (id?: string, type?: string, location?: string, country?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/ListingProviders/Lineups`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -746,7 +748,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/LiveRecordings/{recordingId}/stream`
                 .replace(`{${"recordingId"}}`, encodeURIComponent(String(recordingId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -784,7 +786,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
                 .replace(`{${"streamId"}}`, encodeURIComponent(String(streamId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -835,7 +837,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getLiveTvChannels: async (type?: ChannelType, userId?: string, startIndex?: number, isMovie?: boolean, isSeries?: boolean, isNews?: boolean, isKids?: boolean, isSports?: boolean, limit?: number, isFavorite?: boolean, isLiked?: boolean, isDisliked?: boolean, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, fields?: Array<ItemFields>, enableUserData?: boolean, sortBy?: Array<ItemSortBy>, sortOrder?: SortOrder, enableFavoriteSorting?: boolean, addCurrentProgram?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Channels`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -952,7 +954,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getLiveTvInfo: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Info`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1012,7 +1014,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getLiveTvPrograms: async (channelIds?: Array<string>, userId?: string, minStartDate?: string, hasAired?: boolean, isAiring?: boolean, maxStartDate?: string, minEndDate?: string, maxEndDate?: string, isMovie?: boolean, isSeries?: boolean, isNews?: boolean, isKids?: boolean, isSports?: boolean, startIndex?: number, limit?: number, sortBy?: Array<ItemSortBy>, sortOrder?: Array<SortOrder>, genres?: Array<string>, genreIds?: Array<string>, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, enableUserData?: boolean, seriesTimerId?: string, librarySeriesId?: string, fields?: Array<ItemFields>, enableTotalRecordCount?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Programs`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1166,7 +1168,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Programs/{programId}`
                 .replace(`{${"programId"}}`, encodeURIComponent(String(programId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1204,7 +1206,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getPrograms: async (getProgramsDto?: GetProgramsDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Programs`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1257,7 +1259,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getRecommendedPrograms: async (userId?: string, startIndex?: number, limit?: number, isAiring?: boolean, hasAired?: boolean, isSeries?: boolean, isMovie?: boolean, isNews?: boolean, isKids?: boolean, isSports?: boolean, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, genreIds?: Array<string>, fields?: Array<ItemFields>, enableUserData?: boolean, enableTotalRecordCount?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Programs/Recommended`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1363,7 +1365,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Recordings/{recordingId}`
                 .replace(`{${"recordingId"}}`, encodeURIComponent(String(recordingId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1401,7 +1403,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getRecordingFolders: async (userId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Recordings/Folders`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1443,7 +1445,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Recordings/Groups/{groupId}`
                 .replace(`{${"groupId"}}`, encodeURIComponent(String(groupId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1478,7 +1480,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getRecordingGroups: async (userId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Recordings/Groups`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1534,7 +1536,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getRecordings: async (channelId?: string, userId?: string, startIndex?: number, limit?: number, status?: RecordingStatus, isInProgress?: boolean, seriesTimerId?: string, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, fields?: Array<ItemFields>, enableUserData?: boolean, isMovie?: boolean, isSeries?: boolean, isKids?: boolean, isSports?: boolean, isNews?: boolean, isLibraryItem?: boolean, enableTotalRecordCount?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Recordings`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1658,7 +1660,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getRecordingsSeries: async (channelId?: string, userId?: string, groupId?: string, startIndex?: number, limit?: number, status?: RecordingStatus, isInProgress?: boolean, seriesTimerId?: string, enableImages?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, fields?: Array<ItemFields>, enableUserData?: boolean, enableTotalRecordCount?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Recordings/Series`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1747,7 +1749,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getSchedulesDirectCountries: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/ListingProviders/SchedulesDirect/Countries`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1784,7 +1786,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/SeriesTimers/{timerId}`
                 .replace(`{${"timerId"}}`, encodeURIComponent(String(timerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1819,7 +1821,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getSeriesTimers: async (sortBy?: string, sortOrder?: SortOrder, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/SeriesTimers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1864,7 +1866,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Timers/{timerId}`
                 .replace(`{${"timerId"}}`, encodeURIComponent(String(timerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1901,7 +1903,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getTimers: async (channelId?: string, seriesTimerId?: string, isActive?: boolean, isScheduled?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/Timers`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1950,7 +1952,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
         getTunerHostTypes: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/LiveTv/TunerHosts/Types`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1987,7 +1989,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Tuners/{tunerId}/Reset`
                 .replace(`{${"tunerId"}}`, encodeURIComponent(String(tunerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2023,7 +2025,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('setChannelMapping', 'setChannelMappingDto', setChannelMappingDto)
             const localVarPath = `/LiveTv/ChannelMappings`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2064,7 +2066,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/SeriesTimers/{timerId}`
                 .replace(`{${"timerId"}}`, encodeURIComponent(String(timerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2105,7 +2107,7 @@ export const LiveTvApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/LiveTv/Timers/{timerId}`
                 .replace(`{${"timerId"}}`, encodeURIComponent(String(timerId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

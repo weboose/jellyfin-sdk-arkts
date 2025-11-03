@@ -10,7 +10,7 @@ declare global {
     type HTMLVideoElement = any;
     var document: any;
 
-    class URL extends url.URL { }
+    //class URL extends url.URL { }
 
     //export class URL extends url.URL { }
     class URLSearchParams extends url.URLSearchParams { }

@@ -29,6 +29,8 @@ import { NotificationResultDto } from '../models';
 import { NotificationTypeInfo } from '../models';
 // @ts-ignore
 import { NotificationsSummaryDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * NotificationsApi - axios parameter creator
  * @export
@@ -47,7 +49,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             assertParamExists('createAdminNotification', 'adminNotificationDto', adminNotificationDto)
             const localVarPath = `/Notifications/Admin`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -83,7 +85,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         getNotificationServices: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Notifications/Services`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -116,7 +118,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
         getNotificationTypes: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Notifications/Types`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -153,7 +155,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/Notifications/{userId}`
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -190,7 +192,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/Notifications/{userId}/Summary`
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -227,7 +229,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/Notifications/{userId}/Read`
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -264,7 +266,7 @@ export const NotificationsApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/Notifications/{userId}/Unread`
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -34,6 +34,8 @@ import type { ItemFields } from '../models';
 import type { ItemSortBy } from '../models';
 // @ts-ignore
 import type { SortOrder } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * GenresApi - axios parameter creator
  * @export
@@ -54,7 +56,7 @@ export const GenresApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Genres/{genreName}`
                 .replace(`{${"genreName"}}`, encodeURIComponent(String(genreName)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -109,7 +111,7 @@ export const GenresApiAxiosParamCreator = function (configuration?: Configuratio
         getGenres: async (startIndex?: number, limit?: number, searchTerm?: string, parentId?: string, fields?: Array<ItemFields>, excludeItemTypes?: Array<BaseItemKind>, includeItemTypes?: Array<BaseItemKind>, isFavorite?: boolean, imageTypeLimit?: number, enableImageTypes?: Array<ImageType>, userId?: string, nameStartsWithOrGreater?: string, nameStartsWith?: string, nameLessThan?: string, sortBy?: Array<ItemSortBy>, sortOrder?: Array<SortOrder>, enableImages?: boolean, enableTotalRecordCount?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Genres`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

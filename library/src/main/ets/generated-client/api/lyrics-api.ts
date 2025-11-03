@@ -26,6 +26,8 @@ import type { LyricDto } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { RemoteLyricInfoDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * LyricsApi - axios parameter creator
  * @export
@@ -45,7 +47,7 @@ export const LyricsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Audio/{itemId}/Lyrics`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -86,7 +88,7 @@ export const LyricsApiAxiosParamCreator = function (configuration?: Configuratio
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"lyricId"}}`, encodeURIComponent(String(lyricId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -123,7 +125,7 @@ export const LyricsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Audio/{itemId}/Lyrics`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -160,7 +162,7 @@ export const LyricsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Providers/Lyrics/{lyricId}`
                 .replace(`{${"lyricId"}}`, encodeURIComponent(String(lyricId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -197,7 +199,7 @@ export const LyricsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Audio/{itemId}/RemoteSearch/Lyrics`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -238,7 +240,7 @@ export const LyricsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Audio/{itemId}/Lyrics`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

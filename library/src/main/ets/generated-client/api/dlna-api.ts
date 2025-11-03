@@ -25,6 +25,8 @@ import { DeviceProfile } from '../models';
 import { DeviceProfileInfo } from '../models';
 // @ts-ignore
 import { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * DlnaApi - axios parameter creator
  * @export
@@ -41,7 +43,7 @@ export const DlnaApiAxiosParamCreator = function (configuration?: Configuration)
         createProfile: async (deviceProfile?: DeviceProfile, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Dlna/Profiles`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -81,7 +83,7 @@ export const DlnaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarPath = `/Dlna/Profiles/{profileId}`
                 .replace(`{${"profileId"}}`, encodeURIComponent(String(profileId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -114,7 +116,7 @@ export const DlnaApiAxiosParamCreator = function (configuration?: Configuration)
         getDefaultProfile: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Dlna/Profiles/Default`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -151,7 +153,7 @@ export const DlnaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarPath = `/Dlna/Profiles/{profileId}`
                 .replace(`{${"profileId"}}`, encodeURIComponent(String(profileId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -184,7 +186,7 @@ export const DlnaApiAxiosParamCreator = function (configuration?: Configuration)
         getProfileInfos: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Dlna/ProfileInfos`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -222,7 +224,7 @@ export const DlnaApiAxiosParamCreator = function (configuration?: Configuration)
             const localVarPath = `/Dlna/Profiles/{profileId}`
                 .replace(`{${"profileId"}}`, encodeURIComponent(String(profileId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

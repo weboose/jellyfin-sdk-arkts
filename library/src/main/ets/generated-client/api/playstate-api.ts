@@ -34,6 +34,8 @@ import type { ProblemDetails } from '../models';
 import type { RepeatMode } from '../models';
 // @ts-ignore
 import type { UserItemDataDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * PlaystateApi - axios parameter creator
  * @export
@@ -55,7 +57,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/UserPlayedItems/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -103,7 +105,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/UserPlayedItems/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -156,7 +158,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/PlayingItems/{itemId}/Progress`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -245,7 +247,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/PlayingItems/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -316,7 +318,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/PlayingItems/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -372,7 +374,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
             assertParamExists('pingPlaybackSession', 'playSessionId', playSessionId)
             const localVarPath = `/Sessions/Playing/Ping`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -410,7 +412,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
         reportPlaybackProgress: async (playbackProgressInfo?: PlaybackProgressInfo, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Sessions/Playing/Progress`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -447,7 +449,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
         reportPlaybackStart: async (playbackStartInfo?: PlaybackStartInfo, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Sessions/Playing`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -484,7 +486,7 @@ export const PlaystateApiAxiosParamCreator = function (configuration?: Configura
         reportPlaybackStopped: async (playbackStopInfo?: PlaybackStopInfo, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Sessions/Playing/Stopped`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

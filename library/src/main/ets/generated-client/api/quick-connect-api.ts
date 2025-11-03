@@ -24,6 +24,8 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { QuickConnectResult } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * QuickConnectApi - axios parameter creator
  * @export
@@ -43,7 +45,7 @@ export const QuickConnectApiAxiosParamCreator = function (configuration?: Config
             assertParamExists('authorizeQuickConnect', 'code', code)
             const localVarPath = `/QuickConnect/Authorize`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -84,7 +86,7 @@ export const QuickConnectApiAxiosParamCreator = function (configuration?: Config
         getQuickConnectEnabled: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/QuickConnect/Enabled`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -117,7 +119,7 @@ export const QuickConnectApiAxiosParamCreator = function (configuration?: Config
             assertParamExists('getQuickConnectState', 'secret', secret)
             const localVarPath = `/QuickConnect/Connect`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -151,7 +153,7 @@ export const QuickConnectApiAxiosParamCreator = function (configuration?: Config
         initiateQuickConnect: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/QuickConnect/Initiate`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

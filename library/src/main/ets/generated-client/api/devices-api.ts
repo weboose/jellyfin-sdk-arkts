@@ -28,6 +28,8 @@ import type { DeviceInfoDtoQueryResult } from '../models';
 import type { DeviceOptionsDto } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * DevicesApi - axios parameter creator
  * @export
@@ -46,7 +48,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('deleteDevice', 'id', id)
             const localVarPath = `/Devices`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -86,7 +88,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('getDeviceInfo', 'id', id)
             const localVarPath = `/Devices/Info`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -126,7 +128,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('getDeviceOptions', 'id', id)
             const localVarPath = `/Devices/Options`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -164,7 +166,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
         getDevices: async (userId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Devices`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -207,7 +209,7 @@ export const DevicesApiAxiosParamCreator = function (configuration?: Configurati
             assertParamExists('updateDeviceOptions', 'deviceOptionsDto', deviceOptionsDto)
             const localVarPath = `/Devices/Options`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

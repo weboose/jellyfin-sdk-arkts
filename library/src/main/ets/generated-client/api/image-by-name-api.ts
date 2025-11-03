@@ -23,6 +23,8 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 import { ImageByNameInfo } from '../models';
 // @ts-ignore
 import { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ImageByNameApi - axios parameter creator
  * @export
@@ -46,7 +48,7 @@ export const ImageByNameApiAxiosParamCreator = function (configuration?: Configu
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"type"}}`, encodeURIComponent(String(type)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -76,7 +78,7 @@ export const ImageByNameApiAxiosParamCreator = function (configuration?: Configu
         getGeneralImages: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Images/General`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -117,7 +119,7 @@ export const ImageByNameApiAxiosParamCreator = function (configuration?: Configu
                 .replace(`{${"theme"}}`, encodeURIComponent(String(theme)))
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -147,7 +149,7 @@ export const ImageByNameApiAxiosParamCreator = function (configuration?: Configu
         getMediaInfoImages: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Images/MediaInfo`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -188,7 +190,7 @@ export const ImageByNameApiAxiosParamCreator = function (configuration?: Configu
                 .replace(`{${"theme"}}`, encodeURIComponent(String(theme)))
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -218,7 +220,7 @@ export const ImageByNameApiAxiosParamCreator = function (configuration?: Configu
         getRatingImages: async (options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Images/Ratings`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

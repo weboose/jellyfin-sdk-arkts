@@ -28,6 +28,8 @@ import type { ProblemDetails } from '../models';
 import type { RemoteSubtitleInfo } from '../models';
 // @ts-ignore
 import type { UploadSubtitleDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * SubtitleApi - axios parameter creator
  * @export
@@ -51,7 +53,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"index"}}`, encodeURIComponent(String(index)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -92,7 +94,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"subtitleId"}}`, encodeURIComponent(String(subtitleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -129,7 +131,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/FallbackFont/Fonts/{name}`
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -162,7 +164,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
         getFallbackFontList: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/FallbackFont/Fonts`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -199,7 +201,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/Providers/Subtitles/Subtitles/{subtitleId}`
                 .replace(`{${"subtitleId"}}`, encodeURIComponent(String(subtitleId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -256,7 +258,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
                 .replace(`{${"routeIndex"}}`, encodeURIComponent(String(routeIndex)))
                 .replace(`{${"routeFormat"}}`, encodeURIComponent(String(routeFormat)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -333,7 +335,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
                 .replace(`{${"index"}}`, encodeURIComponent(String(index)))
                 .replace(`{${"mediaSourceId"}}`, encodeURIComponent(String(mediaSourceId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -398,7 +400,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
                 .replace(`{${"routeStartPositionTicks"}}`, encodeURIComponent(String(routeStartPositionTicks)))
                 .replace(`{${"routeFormat"}}`, encodeURIComponent(String(routeFormat)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -469,7 +471,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"language"}}`, encodeURIComponent(String(language)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -513,7 +515,7 @@ export const SubtitleApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/Videos/{itemId}/Subtitles`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

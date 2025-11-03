@@ -24,6 +24,8 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 import type { EncodingContext } from '../models';
 // @ts-ignore
 import type { SubtitleDeliveryMethod } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * AudioApi - axios parameter creator
  * @export
@@ -92,7 +94,7 @@ export const AudioApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/Audio/{itemId}/stream`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -376,7 +378,7 @@ export const AudioApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -653,7 +655,7 @@ export const AudioApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/Audio/{itemId}/stream`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -937,7 +939,7 @@ export const AudioApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

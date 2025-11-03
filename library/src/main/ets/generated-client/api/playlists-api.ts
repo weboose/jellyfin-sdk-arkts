@@ -42,6 +42,8 @@ import type { ProblemDetails } from '../models';
 import type { UpdatePlaylistDto } from '../models';
 // @ts-ignore
 import type { UpdatePlaylistUserDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * PlaylistsApi - axios parameter creator
  * @export
@@ -63,7 +65,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Playlists/{playlistId}/Items`
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -109,7 +111,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
         createPlaylist: async (name?: string, ids?: Array<string>, userId?: string, mediaType?: MediaType, createPlaylistDto?: CreatePlaylistDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Playlists`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -165,7 +167,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Playlists/{playlistId}`
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -210,7 +212,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Playlists/{playlistId}/Items`
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -283,7 +285,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)))
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -320,7 +322,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Playlists/{playlistId}/Users`
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -365,7 +367,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"newIndex"}}`, encodeURIComponent(String(newIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -403,7 +405,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Playlists/{playlistId}/Items`
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -448,7 +450,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)))
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -488,7 +490,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
             const localVarPath = `/Playlists/{playlistId}`
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -535,7 +537,7 @@ export const PlaylistsApiAxiosParamCreator = function (configuration?: Configura
                 .replace(`{${"playlistId"}}`, encodeURIComponent(String(playlistId)))
                 .replace(`{${"userId"}}`, encodeURIComponent(String(userId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

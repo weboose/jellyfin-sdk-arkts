@@ -26,6 +26,8 @@ import type { ProblemDetails } from '../models';
 import type { TaskInfo } from '../models';
 // @ts-ignore
 import type { TaskTriggerInfo } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ScheduledTasksApi - axios parameter creator
  * @export
@@ -45,7 +47,7 @@ export const ScheduledTasksApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/ScheduledTasks/{taskId}`
                 .replace(`{${"taskId"}}`, encodeURIComponent(String(taskId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -80,7 +82,7 @@ export const ScheduledTasksApiAxiosParamCreator = function (configuration?: Conf
         getTasks: async (isHidden?: boolean, isEnabled?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/ScheduledTasks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -125,7 +127,7 @@ export const ScheduledTasksApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/ScheduledTasks/Running/{taskId}`
                 .replace(`{${"taskId"}}`, encodeURIComponent(String(taskId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -162,7 +164,7 @@ export const ScheduledTasksApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/ScheduledTasks/Running/{taskId}`
                 .replace(`{${"taskId"}}`, encodeURIComponent(String(taskId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -202,7 +204,7 @@ export const ScheduledTasksApiAxiosParamCreator = function (configuration?: Conf
             const localVarPath = `/ScheduledTasks/{taskId}/Triggers`
                 .replace(`{${"taskId"}}`, encodeURIComponent(String(taskId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

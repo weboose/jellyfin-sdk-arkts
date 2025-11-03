@@ -26,6 +26,8 @@ import type { BaseItemKind } from '../models';
 import type { MediaType } from '../models';
 // @ts-ignore
 import type { SearchHintResult } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * SearchApi - axios parameter creator
  * @export
@@ -61,7 +63,7 @@ export const SearchApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('getSearchHints', 'searchTerm', searchTerm)
             const localVarPath = `/Search/Hints`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

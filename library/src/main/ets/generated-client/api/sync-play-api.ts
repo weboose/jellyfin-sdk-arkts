@@ -56,6 +56,8 @@ import type { SetPlaylistItemRequestDto } from '../models';
 import type { SetRepeatModeRequestDto } from '../models';
 // @ts-ignore
 import type { SetShuffleModeRequestDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * SyncPlayApi - axios parameter creator
  * @export
@@ -74,7 +76,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayBuffering', 'bufferRequestDto', bufferRequestDto)
             const localVarPath = `/SyncPlay/Buffering`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -113,7 +115,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayCreateGroup', 'newGroupRequestDto', newGroupRequestDto)
             const localVarPath = `/SyncPlay/New`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -153,7 +155,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             const localVarPath = `/SyncPlay/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -186,7 +188,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
         syncPlayGetGroups: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/SyncPlay/List`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -222,7 +224,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayJoinGroup', 'joinGroupRequestDto', joinGroupRequestDto)
             const localVarPath = `/SyncPlay/Join`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -258,7 +260,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
         syncPlayLeaveGroup: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/SyncPlay/Leave`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -294,7 +296,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayMovePlaylistItem', 'movePlaylistItemRequestDto', movePlaylistItemRequestDto)
             const localVarPath = `/SyncPlay/MovePlaylistItem`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -333,7 +335,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayNextItem', 'nextItemRequestDto', nextItemRequestDto)
             const localVarPath = `/SyncPlay/NextItem`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -369,7 +371,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
         syncPlayPause: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/SyncPlay/Pause`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -405,7 +407,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayPing', 'pingRequestDto', pingRequestDto)
             const localVarPath = `/SyncPlay/Ping`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -444,7 +446,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayPreviousItem', 'previousItemRequestDto', previousItemRequestDto)
             const localVarPath = `/SyncPlay/PreviousItem`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -483,7 +485,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayQueue', 'queueRequestDto', queueRequestDto)
             const localVarPath = `/SyncPlay/Queue`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -522,7 +524,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayReady', 'readyRequestDto', readyRequestDto)
             const localVarPath = `/SyncPlay/Ready`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -561,7 +563,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlayRemoveFromPlaylist', 'removeFromPlaylistRequestDto', removeFromPlaylistRequestDto)
             const localVarPath = `/SyncPlay/RemoveFromPlaylist`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -600,7 +602,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlaySeek', 'seekRequestDto', seekRequestDto)
             const localVarPath = `/SyncPlay/Seek`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -639,7 +641,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlaySetIgnoreWait', 'ignoreWaitRequestDto', ignoreWaitRequestDto)
             const localVarPath = `/SyncPlay/SetIgnoreWait`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -678,7 +680,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlaySetNewQueue', 'playRequestDto', playRequestDto)
             const localVarPath = `/SyncPlay/SetNewQueue`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -717,7 +719,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlaySetPlaylistItem', 'setPlaylistItemRequestDto', setPlaylistItemRequestDto)
             const localVarPath = `/SyncPlay/SetPlaylistItem`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -756,7 +758,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlaySetRepeatMode', 'setRepeatModeRequestDto', setRepeatModeRequestDto)
             const localVarPath = `/SyncPlay/SetRepeatMode`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -795,7 +797,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
             assertParamExists('syncPlaySetShuffleMode', 'setShuffleModeRequestDto', setShuffleModeRequestDto)
             const localVarPath = `/SyncPlay/SetShuffleMode`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -831,7 +833,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
         syncPlayStop: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/SyncPlay/Stop`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -864,7 +866,7 @@ export const SyncPlayApiAxiosParamCreator = function (configuration?: Configurat
         syncPlayUnpause: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/SyncPlay/Unpause`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

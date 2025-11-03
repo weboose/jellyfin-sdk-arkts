@@ -26,6 +26,8 @@ import type { BrandingOptionsDto } from '../models';
 import type { MetadataOptions } from '../models';
 // @ts-ignore
 import type { ServerConfiguration } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ConfigurationApi - axios parameter creator
  * @export
@@ -41,7 +43,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
         getConfiguration: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/System/Configuration`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -74,7 +76,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
         getDefaultMetadataOptions: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/System/Configuration/MetadataOptions/Default`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -111,7 +113,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/System/Configuration/{key}`
                 .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -147,7 +149,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
             assertParamExists('updateBrandingConfiguration', 'brandingOptionsDto', brandingOptionsDto)
             const localVarPath = `/System/Configuration/Branding`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -186,7 +188,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
             assertParamExists('updateConfiguration', 'serverConfiguration', serverConfiguration)
             const localVarPath = `/System/Configuration`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -229,7 +231,7 @@ export const ConfigurationApiAxiosParamCreator = function (configuration?: Confi
             const localVarPath = `/System/Configuration/{key}`
                 .replace(`{${"key"}}`, encodeURIComponent(String(key)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

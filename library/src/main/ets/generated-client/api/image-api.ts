@@ -28,6 +28,8 @@ import type { ImageInfo } from '../models';
 import type { ImageType } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ImageApi - axios parameter creator
  * @export
@@ -43,7 +45,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         deleteCustomSplashscreen: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Branding/Splashscreen`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -85,7 +87,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -134,7 +136,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -168,7 +170,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         deleteUserImage: async (userId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/UserImage`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -231,7 +233,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -340,7 +342,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -456,7 +458,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -565,7 +567,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -699,7 +701,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"unplayedCount"}}`, encodeURIComponent(String(unplayedCount)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -787,7 +789,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -877,7 +879,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
             const localVarPath = `/Items/{itemId}/Images`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -933,7 +935,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1049,7 +1051,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1158,7 +1160,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1274,7 +1276,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1362,7 +1364,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         getSplashscreen: async (tag?: string, format?: ImageFormat, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Branding/Splashscreen`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1423,7 +1425,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1539,7 +1541,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1628,7 +1630,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         getUserImage: async (userId?: string, tag?: string, format?: ImageFormat, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/UserImage`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1696,7 +1698,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1805,7 +1807,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1921,7 +1923,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2030,7 +2032,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2164,7 +2166,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"unplayedCount"}}`, encodeURIComponent(String(unplayedCount)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2252,7 +2254,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2361,7 +2363,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2477,7 +2479,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2586,7 +2588,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2702,7 +2704,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2811,7 +2813,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -2927,7 +2929,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -3016,7 +3018,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         headUserImage: async (userId?: string, tag?: string, format?: ImageFormat, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/UserImage`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -3060,7 +3062,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         postUserImage: async (userId?: string, body?: File, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/UserImage`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -3109,7 +3111,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -3158,7 +3160,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -3209,7 +3211,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
                 .replace(`{${"imageType"}}`, encodeURIComponent(String(imageType)))
                 .replace(`{${"imageIndex"}}`, encodeURIComponent(String(imageIndex)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -3247,7 +3249,7 @@ export const ImageApiAxiosParamCreator = function (configuration?: Configuration
         uploadCustomSplashscreen: async (body?: File, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Branding/Splashscreen`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

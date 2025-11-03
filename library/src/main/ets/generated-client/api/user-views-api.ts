@@ -28,6 +28,8 @@ import type { CollectionType } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { SpecialViewOptionDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * UserViewsApi - axios parameter creator
  * @export
@@ -44,7 +46,7 @@ export const UserViewsApiAxiosParamCreator = function (configuration?: Configura
         getGroupingOptions: async (userId?: string, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/UserViews/GroupingOptions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -62,7 +64,7 @@ export const UserViewsApiAxiosParamCreator = function (configuration?: Configura
             }
 
 
-    
+
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
@@ -73,7 +75,7 @@ export const UserViewsApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * 
+         *
          * @summary Get user views.
          * @param {string} [userId] User id.
          * @param {boolean} [includeExternalContent] Whether or not to include external views such as channels or live tv.
@@ -85,7 +87,7 @@ export const UserViewsApiAxiosParamCreator = function (configuration?: Configura
         getUserViews: async (userId?: string, includeExternalContent?: boolean, presetViews?: Array<CollectionType>, includeHidden?: boolean, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/UserViews`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

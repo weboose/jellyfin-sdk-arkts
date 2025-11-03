@@ -44,6 +44,8 @@ import type { RemoteSearchResult } from '../models';
 import type { SeriesInfoRemoteSearchQuery } from '../models';
 // @ts-ignore
 import type { TrailerInfoRemoteSearchQuery } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * ItemLookupApi - axios parameter creator
  * @export
@@ -67,7 +69,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Items/RemoteSearch/Apply/{itemId}`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -110,7 +112,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getBookRemoteSearchResults', 'bookInfoRemoteSearchQuery', bookInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/Book`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -149,7 +151,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getBoxSetRemoteSearchResults', 'boxSetInfoRemoteSearchQuery', boxSetInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/BoxSet`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -189,7 +191,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Items/{itemId}/ExternalIdInfos`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -225,7 +227,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getMovieRemoteSearchResults', 'movieInfoRemoteSearchQuery', movieInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/Movie`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -264,7 +266,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getMusicAlbumRemoteSearchResults', 'albumInfoRemoteSearchQuery', albumInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/MusicAlbum`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -303,7 +305,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getMusicArtistRemoteSearchResults', 'artistInfoRemoteSearchQuery', artistInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/MusicArtist`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -342,7 +344,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getMusicVideoRemoteSearchResults', 'musicVideoInfoRemoteSearchQuery', musicVideoInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/MusicVideo`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -381,7 +383,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getPersonRemoteSearchResults', 'personLookupInfoRemoteSearchQuery', personLookupInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/Person`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -420,7 +422,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getSeriesRemoteSearchResults', 'seriesInfoRemoteSearchQuery', seriesInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/Series`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -459,7 +461,7 @@ export const ItemLookupApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getTrailerRemoteSearchResults', 'trailerInfoRemoteSearchQuery', trailerInfoRemoteSearchQuery)
             const localVarPath = `/Items/RemoteSearch/Trailer`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

@@ -24,6 +24,8 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 import type { PluginInfo } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * PluginsApi - axios parameter creator
  * @export
@@ -47,7 +49,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)))
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -88,7 +90,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)))
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -125,7 +127,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Plugins/{pluginId}/Configuration`
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -166,7 +168,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)))
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -203,7 +205,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Plugins/{pluginId}/Manifest`
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -236,7 +238,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
         getPlugins: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Plugins`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -274,7 +276,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Plugins/{pluginId}`
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -315,7 +317,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)))
                 .replace(`{${"version"}}`, encodeURIComponent(String(version)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -352,7 +354,7 @@ export const PluginsApiAxiosParamCreator = function (configuration?: Configurati
             const localVarPath = `/Plugins/{pluginId}/Configuration`
                 .replace(`{${"pluginId"}}`, encodeURIComponent(String(pluginId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

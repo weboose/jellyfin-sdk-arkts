@@ -24,6 +24,8 @@ import { BASE_PATH, COLLECTION_FORMATS, type RequestArgs, BaseAPI, RequiredError
 import type { ItemFields } from '../models';
 // @ts-ignore
 import type { RecommendationDto } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * MoviesApi - axios parameter creator
  * @export
@@ -44,7 +46,7 @@ export const MoviesApiAxiosParamCreator = function (configuration?: Configuratio
         getMovieRecommendations: async (userId?: string, parentId?: string, fields?: Array<ItemFields>, categoryLimit?: number, itemLimit?: number, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Movies/Recommendations`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

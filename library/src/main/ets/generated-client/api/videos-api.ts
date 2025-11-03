@@ -28,6 +28,8 @@ import type { EncodingContext } from '../models';
 import type { ProblemDetails } from '../models';
 // @ts-ignore
 import type { SubtitleDeliveryMethod } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * VideosApi - axios parameter creator
  * @export
@@ -47,7 +49,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Videos/{itemId}/AlternateSources`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -85,7 +87,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Videos/{itemId}/AdditionalParts`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -177,7 +179,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Videos/{itemId}/stream`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -471,7 +473,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -758,7 +760,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarPath = `/Videos/{itemId}/stream`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1052,7 +1054,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)))
                 .replace(`{${"container"}}`, encodeURIComponent(String(container)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -1287,7 +1289,7 @@ export const VideosApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('mergeVersions', 'ids', ids)
             const localVarPath = `/Videos/MergeVersions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

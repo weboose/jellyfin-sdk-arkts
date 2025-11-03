@@ -28,6 +28,8 @@ import type { BackupOptionsDto } from '../models';
 import type { BackupRestoreRequestDto } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * BackupApi - axios parameter creator
  * @export
@@ -44,7 +46,7 @@ export const BackupApiAxiosParamCreator = function (configuration?: Configuratio
         createBackup: async (backupOptionsDto?: BackupOptionsDto, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Backup/Create`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -83,7 +85,7 @@ export const BackupApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('getBackup', 'path', path)
             const localVarPath = `/Backup/Manifest`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -120,7 +122,7 @@ export const BackupApiAxiosParamCreator = function (configuration?: Configuratio
         listBackups: async (options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
             const localVarPath = `/Backup`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -156,7 +158,7 @@ export const BackupApiAxiosParamCreator = function (configuration?: Configuratio
             assertParamExists('startRestoreBackup', 'backupRestoreRequestDto', backupRestoreRequestDto)
             const localVarPath = `/Backup/Restore`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

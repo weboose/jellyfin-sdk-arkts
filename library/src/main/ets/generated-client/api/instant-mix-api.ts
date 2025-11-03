@@ -28,6 +28,8 @@ import type { ImageType } from '../models';
 import type { ItemFields } from '../models';
 // @ts-ignore
 import type { ProblemDetails } from '../models';
+import { url } from '@kit.ArkTS';
+
 /**
  * InstantMixApi - axios parameter creator
  * @export
@@ -54,7 +56,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Albums/{itemId}/InstantMix`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -126,7 +128,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Artists/{itemId}/InstantMix`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -198,7 +200,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getInstantMixFromArtists2', 'id', id)
             const localVarPath = `/Artists/InstantMix`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -274,7 +276,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Items/{itemId}/InstantMix`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -345,7 +347,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             assertParamExists('getInstantMixFromMusicGenreById', 'id', id)
             const localVarPath = `/MusicGenres/InstantMix`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -421,7 +423,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/MusicGenres/{name}/InstantMix`
                 .replace(`{${"name"}}`, encodeURIComponent(String(name)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -493,7 +495,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Playlists/{itemId}/InstantMix`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
@@ -565,7 +567,7 @@ export const InstantMixApiAxiosParamCreator = function (configuration?: Configur
             const localVarPath = `/Songs/{itemId}/InstantMix`
                 .replace(`{${"itemId"}}`, encodeURIComponent(String(itemId)));
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            const localVarUrlObj = new url.URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;

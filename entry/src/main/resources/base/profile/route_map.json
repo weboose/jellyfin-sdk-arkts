@@ -1,0 +1,20 @@
+{
+  "routerMap": [
+    {
+      "name": "userViews",
+      "pageSourceFile": "src/main/ets/pages/UserViewsPage.ets",
+      "buildFunction": "UserViewsBuilder",
+      "data": {
+        "id": ""
+      }
+    },
+    {
+      "name": "userResumes",
+      "pageSourceFile": "src/main/ets/pages/UserResumesPage.ets",
+      "buildFunction": "UserResumesBuilder",
+      "data": {
+        "id": ""
+      }
+    }
+  ]
+}

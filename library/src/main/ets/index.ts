@@ -12,3 +12,4 @@ export * from './models/index';
 export * from './discovery/index';
 export * from './utils/index';
 export * from './utils/api/index';
+export * from './generated-client';

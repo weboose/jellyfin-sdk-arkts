@@ -15,6 +15,46 @@
       "data": {
         "id": ""
       }
+    },
+    {
+      "name": "nextUp",
+      "pageSourceFile": "src/main/ets/pages/NextUpPage.ets",
+      "buildFunction": "NextUpBuilder",
+      "data": {
+        "id": ""
+      }
+    },
+    {
+      "name": "systemInfo",
+      "pageSourceFile": "src/main/ets/pages/SystemInfoPage.ets",
+      "buildFunction": "SystemInfoBuilder",
+      "data": {
+        "id": ""
+      }
+    },
+    {
+      "name": "userInfo",
+      "pageSourceFile": "src/main/ets/pages/UserInfoPage.ets",
+      "buildFunction": "UserInfoBuilder",
+      "data": {
+        "id": ""
+      }
+    },
+    {
+      "name": "favorites",
+      "pageSourceFile": "src/main/ets/pages/FavoritesPage.ets",
+      "buildFunction": "FavoritesBuilder",
+      "data": {
+        "id": ""
+      }
+    },
+    {
+      "name": "items",
+      "pageSourceFile": "src/main/ets/pages/ItemsPage.ets",
+      "buildFunction": "ItemsBuilder",
+      "data": {
+        "id": ""
+      }
     }
   ]
 }

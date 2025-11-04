@@ -33,14 +33,16 @@ export class ClientUtil
             baseURL: options.server
         });
         axiosInstance.interceptors.request.use((config: InternalAxiosRequestConfig) => {
-            LogUtil.info(`fetch: ${config.url}`);
             if(config.url){
                 try {
                     const apiUrl = new uri.URI(config.url);
                     // 如果低于10.9.0的版本需要做一些兼容性改动
-                    if (isVersionLess(options.serverVersion, '10.9.0')) {
+                    if (options.serverVersion && isVersionLess(options.serverVersion, '10.9.0')) {
                         if(apiUrl.path === '/UserViews'){
                             config.url = `/Users/${apiUrl.getQueryValue('userId')}/Views`;
+                            LogUtil.info('patch: ', config.url);
+                        }else if(apiUrl.path === '/UserItems/Resume'){
+                            config.url = `/Users/${apiUrl.getQueryValue('userId')}/Items/Resume?${apiUrl.query}`;
                             LogUtil.info('patch: ', config.url);
                         }
                     }
@@ -49,6 +51,8 @@ export class ClientUtil
                     LogUtil.error(error);
                 }
             }
+            LogUtil.info(`fetch jellyfin api: ${config.url}`);
+            LogUtil.info('fetch options: ', JSON.stringify(config));
             return config;
         });
 

@@ -1,6 +1,6 @@
 import { Api, BaseItemDto, BaseItemDtoQueryResult, getImageApi, getUserViewsApi } from "@weboose/jellyfin-sdk-arkts"
-import { AppStorageV2, LoadingDialog } from "@kit.ArkUI";
-import { HomeViewModel } from "../viewmodel/HomeViewModel";
+import { AppStorageV2, LoadingDialog, PersistenceV2 } from "@kit.ArkUI";
+import { OptionsViewModel } from "../viewmodel/OptionsViewModel";
 import { ClientUtil } from "../utils/ClientUtil";
 import { AxiosResponse } from "@ohos/axios";
 import { LogUtil, ToastUtil } from "@pura/harmony-utils";
@@ -9,7 +9,7 @@ import { LogUtil, ToastUtil } from "@pura/harmony-utils";
 export struct UserViewsPage
 {
     @Local items: BaseItemDto[] = [];
-    private viewModel:HomeViewModel = AppStorageV2.connect(HomeViewModel, ()=>new HomeViewModel())!;
+    private viewModel: OptionsViewModel = PersistenceV2.connect(OptionsViewModel, ()=>new OptionsViewModel())!;
     loading: CustomDialogController = new CustomDialogController({
         builder: LoadingDialog({
             content: "请稍后..."
@@ -19,6 +19,8 @@ export struct UserViewsPage
 
     @Local refreshing:boolean = false;
     api: Api|null = null;
+
+    @Consumer('pageInfos') pageInfos:NavPathStack = new NavPathStack();
 
     aboutToAppear() {
         this.loadData();
@@ -78,6 +80,11 @@ export struct UserViewsPage
                             }
                             .width("100%")
                         }
+                        .onClick(()=>{
+                            this.pageInfos.replacePathByName("items", {
+                                id: item.Id
+                            });
+                        })
                         .padding(12)
                     })
                 }

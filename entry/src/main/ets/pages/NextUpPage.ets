@@ -8,14 +8,15 @@ import {
     BaseItemDtoQueryResult,
     getImageApi,
     getItemsApi,
+    getTvShowsApi,
     getUserApi, getUserViewsApi,
     ItemsApiGetResumeItemsRequest } from "@weboose/jellyfin-sdk-arkts";
 import { AxiosResponse } from "@ohos/axios";
 
-type ResumeQueryOptions = Record<string, string|string[]>;
+type QueryOptions = Record<string, string|string[]>;
 
 @ComponentV2
-export struct UserResumesPage
+export struct NextUpPage
 {
     private viewModel: OptionsViewModel = PersistenceV2.connect(OptionsViewModel, ()=>new OptionsViewModel())!;
     @Local refreshing: boolean = false;
@@ -46,16 +47,17 @@ export struct UserResumesPage
             });
 
             // fetch resumes
-            const options:ResumeQueryOptions = {
+            const options:QueryOptions = {
                 "userId": this.viewModel.userId,
                 "limit": "12",
-                "imageTypeLimit": "1",
-                "enableImageTypes": ['Primary'],
+                "ImageTypeLimit": "1",
+                "enableImageTypes": ['Primary', "Backdrop", "Banner", "Thumb"],
                 "mediaTypes": ['Video'],
+                "fields": ["PrimaryImageAspectRatio","DateCreated","BasicSyncInfo","Path","MediaSourceCount"]
             };
 
-            const queryResult: AxiosResponse<BaseItemDtoQueryResult> = await getItemsApi(this.api)
-                .getResumeItems(options);
+            const queryResult: AxiosResponse<BaseItemDtoQueryResult> = await getTvShowsApi(this.api)
+                .getNextUp(options);
 
             if(queryResult.status !== 200){
                 throw new Error(queryResult.statusText);
@@ -115,13 +117,13 @@ export struct UserResumesPage
                 .padding(12)
             }
         }
-        .title("继续观看")
+        .title("接下来")
         .width("100%")
         .height("100%")
     }
 }
 
 @Builder
-export function UserResumesBuilder(){
-    UserResumesPage();
+export function NextUpBuilder(){
+    NextUpPage();
 }

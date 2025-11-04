@@ -1,7 +1,7 @@
 import { ConfigInterface } from "../model/JellyfinOptions";
 
 @ObservedV2
-export class HomeViewModel
+export class OptionsViewModel
 {
     @Trace server: string = 'http://demo.jellyfin.org/stable';
     @Trace username: string = '';

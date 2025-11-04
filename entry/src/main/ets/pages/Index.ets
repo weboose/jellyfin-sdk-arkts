@@ -1,10 +1,10 @@
-import { AppStorageV2, LoadingDialog } from '@kit.ArkUI'
+import { AppStorageV2, LoadingDialog, PersistenceV2 } from '@kit.ArkUI'
 import { AxiosResponse } from '@ohos/axios';
 import { Base64Util, DeviceUtil, LogUtil, StrUtil, ToastUtil } from '@pura/harmony-utils';
 import { AuthenticationResult, getSystemApi, getUserApi, Jellyfin } from '@weboose/jellyfin-sdk-arkts';
 import { PublicSystemInfo } from '@weboose/jellyfin-sdk-arkts/src/main/ets/generated-client/models';
 import { ClientUtil } from '../utils/ClientUtil';
-import { HomeViewModel } from '../viewmodel/HomeViewModel';
+import { OptionsViewModel } from '../viewmodel/OptionsViewModel';
 
 interface OptionValues {
     server: string;
@@ -16,7 +16,7 @@ interface OptionValues {
 @ComponentV2
 struct Index {
 
-    private viewModel: HomeViewModel = AppStorageV2.connect(HomeViewModel, ()=>new HomeViewModel())!;
+    private viewModel: OptionsViewModel = PersistenceV2.connect(OptionsViewModel, ()=>new OptionsViewModel())!;
     @Provider('pageInfos') pageInfos: NavPathStack = new NavPathStack();
 
     @Local values:OptionValues = {
@@ -188,16 +188,16 @@ struct Index {
             }).onClick(()=>this.pageInfos.replacePathByName("userResumes", {}));
             MenuItem({
                 content: "读取接下来观看"
-            })
+            }).onClick(()=>this.pageInfos.replacePathByName("nextUp", {}))
             MenuItem({
                 content: "读取系统信息"
-            })
+            }).onClick(()=>this.pageInfos.replacePathByName("systemInfo", {}))
             MenuItem({
                 content: "读取用户信息"
-            })
+            }).onClick(()=>this.pageInfos.replacePathByName("userInfo", {}))
             MenuItem({
                 content: "读取用户收藏"
-            })
+            }).onClick(()=>this.pageInfos.replacePathByName("favorites", {}))
             MenuItem({
                 content: "重置服务器信息"
             }).onClick(()=>{

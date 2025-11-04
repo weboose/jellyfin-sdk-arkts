@@ -8,14 +8,18 @@ import {
     BaseItemDtoQueryResult,
     getImageApi,
     getItemsApi,
+    getSystemApi,
+    getTvShowsApi,
     getUserApi, getUserViewsApi,
-    ItemsApiGetResumeItemsRequest } from "@weboose/jellyfin-sdk-arkts";
+    ItemsApiGetResumeItemsRequest,
+    SystemInfo} from "@weboose/jellyfin-sdk-arkts";
 import { AxiosResponse } from "@ohos/axios";
+import { ValueType } from "@kit.ArkData";
 
-type ResumeQueryOptions = Record<string, string|string[]>;
+type QueryOptions = Record<string, string|string[]>;
 
 @ComponentV2
-export struct UserResumesPage
+export struct SystemInfoPage
 {
     private viewModel: OptionsViewModel = PersistenceV2.connect(OptionsViewModel, ()=>new OptionsViewModel())!;
     @Local refreshing: boolean = false;
@@ -26,7 +30,7 @@ export struct UserResumesPage
         alignment: DialogAlignment.Center
     });
 
-    @Local items: BaseItemDto[] = [];
+    @Local systemInfo: SystemInfo | null = null;
 
     private api: Api|null = null;
 
@@ -46,22 +50,23 @@ export struct UserResumesPage
             });
 
             // fetch resumes
-            const options:ResumeQueryOptions = {
+            const options:QueryOptions = {
                 "userId": this.viewModel.userId,
                 "limit": "12",
-                "imageTypeLimit": "1",
-                "enableImageTypes": ['Primary'],
+                "ImageTypeLimit": "1",
+                "enableImageTypes": ['Primary', "Backdrop", "Banner", "Thumb"],
                 "mediaTypes": ['Video'],
+                "fields": ["PrimaryImageAspectRatio","DateCreated","BasicSyncInfo","Path","MediaSourceCount"]
             };
 
-            const queryResult: AxiosResponse<BaseItemDtoQueryResult> = await getItemsApi(this.api)
-                .getResumeItems(options);
+            const queryResult: AxiosResponse<SystemInfo> = await getSystemApi(this.api)
+                .getSystemInfo();
 
             if(queryResult.status !== 200){
                 throw new Error(queryResult.statusText);
             }
 
-            this.items = queryResult.data.Items || [];
+            this.systemInfo = queryResult.data;
 
         }catch (e) {
             LogUtil.error(e);
@@ -77,51 +82,31 @@ export struct UserResumesPage
             Refresh({
                 refreshing: $$this.refreshing
             }){
-                Grid()
-                {
-                    ForEach(this.items, (item: BaseItemDto) => {
-                        GridItem()
-                        {
-                            Column({space: 8}){
-                                Image(getImageApi(this.api).getItemImageUrl(item, "Primary", {
-                                    quality: 96,
-                                    fillWidth: 335,
-                                    fillHeight: 200
-                                }))
-                                    .width("100%")
-                                    .aspectRatio(16/9)
-                                    .backgroundColor(Color.Gray)
-                                    .borderRadius(8)
-                                    .shadow(ShadowStyle.OUTER_DEFAULT_XS);
-
-                                Text(item.Name)
-                                    .ellipsisMode(EllipsisMode.START)
-                                    .maxLines(1)
-                                    .fontSize(12)
-                                    .textOverflow({
-                                        overflow: TextOverflow.Ellipsis
-                                    })
-                                ;
+                List({space: 12}){
+                    ForEach(Object.entries(this.systemInfo || []), (item: [string, ValueType])=>{
+                        ListItem(){
+                            Column({space: 2}) {
+                                Text(`${item[0]}: `).fontWeight(FontWeight.Bold)
+                                Text(String(item[1]))
                             }
                             .width("100%")
+                            .justifyContent(FlexAlign.Start)
+                            .alignItems(HorizontalAlign.Start)
                         }
                     })
                 }
-                .columnsTemplate("1fr 1fr")
-                .columnsGap(12)
-                .rowsGap(12)
                 .width("100%")
                 .height("100%")
-                .padding(12)
+                .padding(24)
             }
         }
-        .title("继续观看")
+        .title("系统信息")
         .width("100%")
         .height("100%")
     }
 }
 
 @Builder
-export function UserResumesBuilder(){
-    UserResumesPage();
+export function SystemInfoBuilder(){
+    SystemInfoPage();
 }

@@ -84,7 +84,7 @@ export const setOAuthToObject = async function (object: any, name: string, scope
     }
 }
 
-function setFlattenedQueryParams(urlSearchParams: arktsUrl.URLSearchParams, parameter: any, key: string = ""): void {
+function setFlattenedQueryParams(urlSearchParams: arktsUrl.URLParams, parameter: any, key: string = ""): void {
     if (parameter == null) return;
     if (typeof parameter === "object") {
         if (Array.isArray(parameter)) {
@@ -111,7 +111,7 @@ function setFlattenedQueryParams(urlSearchParams: arktsUrl.URLSearchParams, para
  * @export
  */
 export const setSearchParams = function (url: arktsUrl.URL, ...objects: any[]) {
-    const searchParams = new arktsUrl.URLSearchParams(url.search);
+    const searchParams = new arktsUrl.URLParams(url.search);
     setFlattenedQueryParams(searchParams, objects);
     url.search = searchParams.toString();
 }

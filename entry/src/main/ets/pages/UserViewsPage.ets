@@ -81,8 +81,10 @@ export struct UserViewsPage
                             .width("100%")
                         }
                         .onClick(()=>{
-                            this.pageInfos.replacePathByName("items", {
+                            this.pageInfos.pushPathByName("items", {
                                 id: item.Id
+                            }, ()=>{
+                                LogUtil.info("goto items page")
                             });
                         })
                         .padding(12)

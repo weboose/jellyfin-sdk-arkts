@@ -55,6 +55,14 @@
       "data": {
         "id": ""
       }
+    },
+    {
+      "name": "videoInfo",
+      "pageSourceFile": "src/main/ets/pages/VideoInfoPage.ets",
+      "buildFunction": "VideoInfoBuilder",
+      "data": {
+        "id": ""
+      }
     }
   ]
 }
